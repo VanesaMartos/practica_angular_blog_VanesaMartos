@@ -1,0 +1,13 @@
+<div>
+    <div>
+        <label class="form-label">Selecciona una categoría</label>
+        <select class="form-select" (change)="onChange($event)">
+            <option value="Todos">Todas</option>
+            <option *ngFor="let item of arrayCategorias">{{item}}</option>
+        </select>
+    </div>
+
+    <div class="posts">
+        <app-post-card *ngFor="let item of postsRecuperados" [post]="item"></app-post-card>
+    </div>
+</div>
