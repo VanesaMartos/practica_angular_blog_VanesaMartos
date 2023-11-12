@@ -1,7 +1,7 @@
 <article>
     <h2>{{post.titulo}}</h2>
     <p>{{post.autor}} </p>
-    <p>{{post.texto}}</p>
+    <p [innerHTML]="post.texto"></p>
     <figure>
         <img [src]="post.imagen" [alt]="post.titulo">
     </figure>

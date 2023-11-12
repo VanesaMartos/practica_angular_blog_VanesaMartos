@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Post } from 'src/app/interfaces/post.interface';
 import { PostService } from 'src/app/services/post.service';
 
 @Component({
@@ -32,6 +31,5 @@ export class FormularioComponent {
     this.nuevoPost.reset();
     this.router.navigate(['/posts']);
   }
-
 
 }
