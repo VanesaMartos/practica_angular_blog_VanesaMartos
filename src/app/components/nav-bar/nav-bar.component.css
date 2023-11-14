@@ -1,0 +1,14 @@
+nav div.collapse ul {
+    width: 100%;
+    justify-content: end;
+
+}
+
+.navbar-nav li {
+    padding: 0.625rem 1.25rem;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(128, 128, 128, 0.13);
+    }
+}

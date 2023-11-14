@@ -8,13 +8,17 @@ import { ListaPostComponent } from './pages/lista-post/lista-post.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { EditorModule } from 'primeng/editor';
+import { HomeComponent } from './pages/home/home.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaPostComponent,
     FormularioComponent,
-    PostCardComponent
+    PostCardComponent,
+    HomeComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
