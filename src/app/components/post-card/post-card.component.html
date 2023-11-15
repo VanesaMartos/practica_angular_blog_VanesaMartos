@@ -8,4 +8,5 @@
     <p>Creado en {{post.fecha}}</p>
     <p>Categoría: {{post.categoria}}</p>
 
+    <button class="btn btn-success" [routerLink]="['/posts', post.id]">Ver detalle</button>
 </article>

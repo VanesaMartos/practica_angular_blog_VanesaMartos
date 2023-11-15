@@ -10,6 +10,7 @@ import { PostCardComponent } from './components/post-card/post-card.component';
 import { EditorModule } from 'primeng/editor';
 import { HomeComponent } from './pages/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { DetallePostComponent } from './pages/detalle-post/detalle-post.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     FormularioComponent,
     PostCardComponent,
     HomeComponent,
-    NavBarComponent
+    NavBarComponent,
+    DetallePostComponent
   ],
   imports: [
     BrowserModule,
