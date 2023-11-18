@@ -19,7 +19,7 @@ export class DetallePostComponent {
     this.activatedRoute.params.subscribe((params) => {
       console.log(params);
 
-      this.postSeleccionado = this.postService.getById(parseInt(params['postID']))
+      this.postSeleccionado = this.postService.getById(parseInt(params['postId']))
     })
   }
 

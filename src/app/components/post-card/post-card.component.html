@@ -5,7 +5,7 @@
     <figure>
         <img [src]="post.imagen" [alt]="post.titulo">
     </figure>
-    <p>Creado en {{post.fecha}}</p>
+    <p>Creado el {{post.fecha | date: 'longDate'}}</p>
     <p>Categoría: {{post.categoria}}</p>
 
     <button class="btn btn-success" [routerLink]="['/posts', post.id]">Ver detalle</button>
