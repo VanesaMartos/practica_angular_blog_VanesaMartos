@@ -12,3 +12,7 @@ nav div.collapse ul {
         background-color: rgba(128, 128, 128, 0.13);
     }
 }
+
+.active {
+    font-weight: bold;
+}

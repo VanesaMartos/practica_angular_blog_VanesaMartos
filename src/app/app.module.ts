@@ -14,6 +14,7 @@ import { EditorModule } from 'primeng/editor';
 import { HomeComponent } from './pages/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { DetallePostComponent } from './pages/detalle-post/detalle-post.component';
+import { PreviewPipe } from './pipes/preview.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DetallePostComponent } from './pages/detalle-post/detalle-post.componen
     PostCardComponent,
     HomeComponent,
     NavBarComponent,
-    DetallePostComponent
+    DetallePostComponent,
+    PreviewPipe
   ],
   imports: [
     BrowserModule,

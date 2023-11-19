@@ -1,11 +1,31 @@
 .lista-posts {
-    background-color: var(--darkBlue);
+    background-image: url(https://estepais.com/wp-content/uploads/2021/08/WhatsApp-Image-2021-08-27-at-08.26.57-1024x1024.jpeg);
+    /* background-color: var(--darkBlue); */
+    background-size: contain;
+    padding: var(--pad);
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
     padding: var(--pad);
 }
 
+h2 {
+    color: #fff7cc;
+    font-weight: 600;
+    font-size: 3.5em;
+}
+
 .select {
+    backdrop-filter: blur(6px) saturate(102%);
+    background-color: rgba(255, 255, 255, 0.589);
     padding: var(--pad);
+    border: 2px solid var(--darkRed);
     color: var(--darkRed);
+    font-weight: bolder;
+    font-size: 1.25em;
 
     & select {
         background-color: transparent;
@@ -13,5 +33,6 @@
         border: none;
         border-radius: 0;
         border-bottom: 1px solid var(--darkRed);
+        box-shadow: none;
     }
 }
