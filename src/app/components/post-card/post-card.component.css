@@ -1,0 +1,36 @@
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+div.row {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--darkRed);
+    padding: var(--pad);
+    margin: var(--pad);
+    color: var(--darkRed);
+    background-color: rgba(255, 255, 255, 0.87);
+    ;
+}
+
+.btn {
+    background-color: var(--blue);
+    color: bisque;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

@@ -1,0 +1,17 @@
+.lista-posts {
+    background-color: var(--darkBlue);
+    padding: var(--pad);
+}
+
+.select {
+    padding: var(--pad);
+    color: var(--darkRed);
+
+    & select {
+        background-color: transparent;
+        color: var(--darkRed);
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid var(--darkRed);
+    }
+}

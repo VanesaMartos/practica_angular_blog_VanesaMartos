@@ -19,8 +19,8 @@
 
     &:hover {
         background-color: var(--red);
+        border-color: var(--red);
         color: black;
-        border: 2px solid black;
     }
 }
 

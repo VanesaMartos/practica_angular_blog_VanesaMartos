@@ -1,12 +1,17 @@
-<article>
-    <h2>{{post.titulo}}</h2>
-    <p>{{post.autor}} </p>
-    <p [innerHTML]="post.texto"></p>
-    <figure>
-        <img [src]="post.imagen" [alt]="post.titulo">
-    </figure>
-    <p>Creado el {{post.fecha | date: 'longDate'}}</p>
-    <p>Categoría: {{post.categoria}}</p>
+<div class="container">
+    <article>
+        <div class="row">
+            <figure class="col-4">
+                <img [src]="post.imagen" [alt]="post.titulo">
+            </figure>
+            <div class="texto col-8">
+                <h2>{{post.titulo}}</h2>
+                <p>{{post.autor}} </p>
+                <p>Categoría: {{post.categoria}}</p>
+                <p [innerHTML]="post.texto | slice:0:200"></p>
+                <button class="btn" [routerLink]="['/posts', post.id]">Leer más</button>
+            </div>
+        </div>
 
-    <button class="btn btn-success" [routerLink]="['/posts', post.id]">Ver detalle</button>
-</article>
+    </article>
+</div>
