@@ -1,9 +1,26 @@
 <div *ngIf="postSeleccionado">
     <app-post-card [post]="postSeleccionado"></app-post-card>
 </div>
-<div *ngIf="!postSeleccionado">
-    <p>No encontramos la publicación que buscas.</p>
-    <figure>
-        <img src="https://i.pinimg.com/564x/cd/14/3f/cd143f12a87bab024e83744f944ebaf4.jpg" alt="Better days are coming">
-    </figure>
+<div class="error" *ngIf="!postSeleccionado">
+
+
+
+    <div lc-helper="background" class="container-fluid py-5 mb-4 d-flex justify-content-center" id="error">
+        <div class="secondary-div p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12">
+            <div class="lc-block">
+                <div editable="rich">
+                    <h2 class="fw-bolder display-3">No encontramos la página que buscas</h2>
+                </div>
+            </div>
+            <div class="lc-block col-md-8">
+                <div editable="rich">
+                    <p class="lead">Puedes buscar el post que necesitas desde la lista completa de posts o navegar desde
+                        la página Home.</p>
+                </div>
+            </div>
+            <div class="lc-block">
+                <a class="btn btn-dark" href="#" role="button" [routerLink]="['/home']">¡Vuelve a Home!</a>
+            </div>
+        </div>
+    </div>
 </div>

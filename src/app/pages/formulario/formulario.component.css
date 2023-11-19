@@ -1,0 +1,87 @@
+#form {
+    background-image: url(https://estepais.com/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-04-at-15.55.04-1024x1024.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.secondary-div {
+    backdrop-filter: blur(6px) saturate(102%);
+    -webkit-backdrop-filter: blur(6px) saturate(102%);
+    background-color: rgba(255, 255, 255, 0.658);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+h2 {
+    color: var(--darkBlue);
+    padding-bottom: var(--pad);
+    font-size: 3.25em;
+    text-align: center;
+}
+
+hr {
+    color: var(--darkRed);
+}
+
+label {
+    color: var(--darkRed);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: var(--pad);
+}
+
+input,
+select,
+option,
+p-editor {
+    margin: 10px auto;
+    color: var(--darkRed);
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    border-bottom: 1px solid var(--darkRed);
+}
+
+input:focus,
+select:focus {
+    background-color: rgba(255, 255, 255, 0.45);
+    color: var(--darkRed);
+    outline: 0;
+    outline-width: 1px;
+    box-shadow: 0.25rem 0.25rem var(--darkBlue), -0.25rem -0.25rem var(--darkRed);
+    border: none;
+}
+
+
+.btn {
+    float: inline-end;
+    font-size: 1.25em;
+    color: white;
+    margin-top: 1.875rem;
+    background-color: var(--darkRed);
+    border-color: var(--darkRed);
+
+    &:hover {
+        background-color: var(--darkBlue);
+        border-color: var(--darkBlue);
+    }
+}
+
+input:focus {
+    border: none;
+}
+
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+    border-bottom: 2px solid var(--darkRed);
+}
+
+/* #richEditor.ng-invalid {
+    background-color: var(--darkRed);
+} */
+
+.error {
+    color: var(--darkRed);
+}

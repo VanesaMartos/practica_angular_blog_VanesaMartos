@@ -1,57 +1,77 @@
-<div class="container">
-
-    <form [formGroup]="nuevoPost" (ngSubmit)="onSubmit()">
-
-
-        <div class="row">
-
-
-            <div class="mb-4 col-xs-12 col-md-4">
-                <label class="form-label">Título</label>
-                <input type="text" class="form-control" formControlName="titulo">
-            </div>
-
-            <div class="mb-4 col-xs-12 col-md-4">
-                <label class="form-label">Autor</label>
-                <input type="text" class="form-control" formControlName="autor">
+<div class="container-fluid py-5 mb-4 d-flex justify-content-center" id="form">
+    <div class="secondary-div p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12">
+        <div class="lc-block">
+            <div editable="rich">
+                <h2 class="fw-bolder display-3">¡Crea una nueva publicación!</h2>
+                <hr>
             </div>
         </div>
 
+        <form [formGroup]="nuevoPost" (ngSubmit)="onSubmit()">
+            <div class="row green">
+                <div class="mb-6 col-xs-12 col-md-6">
+                    <label class="form-label">Título</label>
+                    <input type="text" class="form-control" formControlName="titulo">
+                    <p class="error" *ngIf="checkError('titulo', 'required')">
+                        El título es obligatorio.
+                    </p>
+                </div>
+                <div class="mb-6 col-xs-12 col-md-6">
+                    <label class="form-label">Autor</label>
+                    <input type="text" class="form-control" formControlName="autor">
+                    <p class="error" *ngIf="checkError('autor', 'required')">
+                        El nombre de quien escribe la publicación es obligatorio.
+                    </p>
+                </div>
 
-
-        <div class="row">
-            <div class="mb-4 col-xs-12 col-md-4">
-                <label class="form-label">Contenido</label>
-                <p-editor [style]="{ height: '320px' }" formControlName="texto"></p-editor>
             </div>
-            <div class="mb-4 col-xs-12 col-md-4">
-                <label class="form-label">Imagen (URL)</label>
-                <input type="text" class="form-control" formControlName="imagen">
+            <div class="row yellow">
+                <div class="mb-12 col-xs-12 col-md-12">
+                    <label class="form-label">Imagen (URL)</label>
+                    <input type="text" class="form-control" formControlName="imagen">
+                </div>
             </div>
 
-        </div>
 
-        <div class="row">
-            <div class="mb-4 col-xs-12 col-md-4">
-                <label class="form-label">Fecha</label>
-                <input type="date" class="form-control" formControlName="fecha">
+            <div class="row red" id="richEditor">
+                <div class="mb-12 col-xs-12 col-md-12">
+                    <label class="form-label">Contenido</label>
+                    <p-editor [style]="{ height: '320px' }" formControlName="texto"
+                        placeholder="Escribe aquí el contenido de tu publicación.">
+
+                    </p-editor>
+                    <p class="error" *ngIf="checkError('texto', 'required')">
+                        Escribe algún contenido para la publicación.
+                    </p>
+
+                </div>
             </div>
-            <div class="mb-4 col-xs-12 col-md-4">
-                <label class="form-label">Categoria</label>
-                <select class="form-select" formControlName="categoria">
-                    <option value="Agricultura y ganadería">Agricultura y ganadería</option>
-                    <option value="Ciudades inteligentes">Ciudades inteligentes</option>
-                    <option value="Inclusión social">Inclusión social</option>
-                    <option value="Biodiversidad">Biodiversidad</option>
-                    <option value="Energía">Energía</option>
-                    <option value="Salud">Salud</option>
-                    <option value="Otros">Otros</option>
-                </select>
+
+            <div class="row">
+                <div class="mb-6 col-xs-12 col-md-6">
+                    <label class="form-label">Fecha</label>
+                    <input type="date" class="form-control" formControlName="fecha">
+                </div>
+                <div class="mb-6 col-xs-12 col-md-6">
+                    <label class="form-label">Categoria</label>
+                    <select class="form-select" formControlName="categoria">
+                        <option value="Agricultura y ganadería">Agricultura y ganadería</option>
+                        <option value="Ciudades inteligentes">Ciudades inteligentes</option>
+                        <option value="Inclusión social">Inclusión social</option>
+                        <option value="Biodiversidad">Biodiversidad</option>
+                        <option value="Energía">Energía</option>
+                        <option value="Salud">Salud</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                    <p class="error" *ngIf="checkError('categoria', 'required')">
+                        Selecciona una categoría, por favor.
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <button type="submit" value="Enviar" class="btn btn-success">Enviar</button>
+            <button type="submit" value="Enviar" class="btn btn-success">Enviar</button>
 
 
-    </form>
+        </form>
+    </div>
 </div>
