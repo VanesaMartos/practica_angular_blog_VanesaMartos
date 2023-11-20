@@ -1,22 +1,19 @@
 <div class="lista-posts">
     <div class="row">
-        <div class="col-lg-8 col-md-8 col-xs-12">
+        <div class=" title col-lg-8 col-md-8 col-xs-12">
             <div class="lc-block">
                 <h2 class="fw-bolder display-3">Internet of things, <br>internet of life</h2>
-                <hr>
             </div>
         </div>
-        <div class="select col-lg-4 col-md-4 col-xs-12">
-            <label class="form-label">Categorías</label>
+        <hr>
+        <div class="input-group mb-3">
+            <label class="input-group-text">Categorías</label>
             <select class="form-select" (change)="onChange($event)">
-                <option value="Todos">Todas</option>
+                <option selected value="Todos">Todas</option>
                 <option *ngFor="let item of arrayCategorias">{{item}}</option>
             </select>
         </div>
-
     </div>
-
-
     <div class="posts">
         <app-post-card *ngFor="let item of postsRecuperados" [post]="item"></app-post-card>
     </div>
