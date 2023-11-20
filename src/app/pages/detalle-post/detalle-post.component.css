@@ -2,18 +2,23 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: calc(var(--pad) * 5);
+    padding: calc(var(--pad) * 2);
 }
 
 .container button {
     margin: var(--pad);
     background-color: var(--darkRed);
     border-color: var(--darkRed);
+    transition: 0.5s;
 
     &:hover {
-        background-color: var(--green);
-        border-color: var(--green);
+        transition: 0.5s;
+        transform: scale(1.15);
     }
+}
+
+article p:first-of-type {
+    padding-top: var(--pad);
 }
 
 .container article {
@@ -27,6 +32,10 @@
 
 }
 
+h2 {
+    margin-bottom: 0;
+}
+
 #error {
     background-image: url(https://estepais.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-30-at-15.40.16-1024x1024.jpeg);
     background-position: center;
@@ -37,7 +46,15 @@
 .secondary-div {
     backdrop-filter: blur(6px) saturate(102%);
     -webkit-backdrop-filter: blur(6px) saturate(102%);
-    background-color: rgba(255, 255, 255, 0.74);
+    background-color: var(--trans);
     border-radius: 12px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
+
+    & button {
+        transition: 0.5s;
+
+        &:hover {
+            transition: 0.5s;
+            transform: scale(1.15);
+        }
+    }
 }

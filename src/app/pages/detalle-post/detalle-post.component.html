@@ -2,19 +2,17 @@
     <div class="container" style.background-image="url('{{postSeleccionado.imagen}}')">
         <article class="secondary-div">
             <h2>{{postSeleccionado.titulo}}</h2>
-            <p>{{postSeleccionado.autor}} </p>
-            <p>Categoría: {{postSeleccionado.categoria}}</p>
+            <small>{{postSeleccionado.autor}} </small>
             <p [innerHTML]="postSeleccionado.texto"></p>
             <p>Publicado el {{postSeleccionado.fecha | date: 'longDate'}}</p>
-
+            <p>Categoría: <br> {{postSeleccionado.categoria}}</p>
             <button class="btn btn-dark" [routerLink]="['/posts']">Volver a la lista de publicaciones</button>
         </article>
-
     </div>
 </div>
 <div class="error" *ngIf="!postSeleccionado">
-    <div lc-helper="background" class="container-fluid py-5 mb-4 d-flex justify-content-center" id="error">
-        <div class="secondary-div p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12">
+    <div class="container-fluid py-5 mb-4 d-flex justify-content-center" id="error">
+        <div class="secondary-div p-5 mb-4 col-xxl-7 col-lg-8 col-12">
             <div class="lc-block">
                 <div editable="rich">
                     <h2 class="fw-bolder display-3">No encontramos la página que buscas</h2>
@@ -26,9 +24,7 @@
                         la página Home.</p>
                 </div>
             </div>
-            <div class="lc-block">
-                <a class="btn btn-dark" href="#" role="button" [routerLink]="['/home']">¡Vuelve a Home!</a>
-            </div>
+            <button class="btn btn-dark" [routerLink]="['/home']">¡Vuelve a Home!</button>
         </div>
     </div>
 </div>

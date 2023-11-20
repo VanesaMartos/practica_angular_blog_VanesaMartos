@@ -8,22 +8,18 @@
 .secondary-div {
     backdrop-filter: blur(6px) saturate(102%);
     -webkit-backdrop-filter: blur(6px) saturate(102%);
-    background-color: rgba(255, 255, 255, 0.589);
+    background-color: var(--trans);
     border-radius: 12px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
-.btn {
-    font-size: 1.2em;
-    color: bisque;
+button.btn {
+    color: var(--trans);
+    transition: 0.5s;
 
     &:hover {
-        background-color: var(--red);
-        border-color: var(--red);
-        color: black;
+        cursor: pointer;
+        transition: 0.5s;
+        transform: scale(1.15);
+
     }
 }
-
-/* https://i.pinimg.com/originals/df/da/99/dfda992fc75edcf9a462bc02057f24d5.jpg */
-/* https://i.pinimg.com/564x/63/ed/d7/63edd761bc590945bf2f256fbe8ffe60.jpg */
-/* https://i.pinimg.com/564x/19/ae/ab/19aeaba554861ee53fd28accaefabf1d.jpg */

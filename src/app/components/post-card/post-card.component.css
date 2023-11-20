@@ -7,30 +7,52 @@ img {
     width: 100%;
     height: auto;
     display: block;
+    border: 2px solid var(--darkRed);
 }
 
 div.row {
     position: relative;
     margin: 0;
     padding: 0;
-
 }
 
 article {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--darkRed);
+    border: 2px solid var(--darkRed);
     padding: var(--pad);
     margin: var(--pad);
     color: var(--darkRed);
-    background-color: rgba(255, 255, 255, 0.87);
-    ;
+    background-color: var(--trans);
+    position: relative;
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+small {
+    display: block;
+    padding-bottom: var(--pad);
+}
+
+article p:last-of-type {
+    color: var(--darkBlue);
+    font-size: 0.8em;
+    margin-bottom: 0;
 }
 
 .btn {
-    background-color: var(--blue);
-    color: bisque;
+    background-color: var(--darkBlue);
+    color: var(--trans);
     position: absolute;
     bottom: 0;
     right: 0;
+    transition: 0.5s;
+
+    &:hover {
+        transition: 0.5s;
+        transform: scale(1.15);
+    }
 }

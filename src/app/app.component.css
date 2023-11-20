@@ -3,14 +3,12 @@
     --green: #6BCB77;
     --yellow: #FFD93D;
     --red: #FF6B6B;
-    --pastelBlue: #9ADCFF;
-    --pastelGreen: #CBFFA9;
-    --pastelYellow: #FFF89A;
-    --pastelRed: #FF9B9B;
-    --darkBlue: #6266a6;
-    --darkGreen: #3b6d42;
-    --darkYellow: #b69616;
+    --pastelYellow: #fff7cc;
+    --formBlue: #4582b9;
+    --darkBlue: #005277;
+    --purple: #6266a6;
     --darkRed: #6a404a;
+    --black: #212529;
     --pad: 1.25rem;
-    --size:
+    --trans: rgba(255, 255, 255, 0.815);
 }

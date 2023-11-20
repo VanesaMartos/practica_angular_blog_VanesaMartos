@@ -15,6 +15,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { DetallePostComponent } from './pages/detalle-post/detalle-post.component';
 import { PreviewPipe } from './pipes/preview.pipe';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PreviewPipe } from './pipes/preview.pipe';
     HomeComponent,
     NavBarComponent,
     DetallePostComponent,
-    PreviewPipe
+    PreviewPipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

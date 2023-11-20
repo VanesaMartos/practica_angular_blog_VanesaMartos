@@ -3,29 +3,22 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    color: var(--darkRed);
 }
 
 .secondary-div {
     backdrop-filter: blur(6px) saturate(102%);
     -webkit-backdrop-filter: blur(6px) saturate(102%);
-    background-color: rgba(255, 255, 255, 0.658);
+    background-color: var(--trans);
     border-radius: 12px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
 h2 {
-    color: var(--darkBlue);
     padding-bottom: var(--pad);
-    font-size: 3.25em;
-    text-align: center;
-}
-
-hr {
-    color: var(--darkRed);
+    font-size: 3em;
 }
 
 label {
-    color: var(--darkRed);
     font-size: 18px;
     font-weight: bold;
     margin-top: var(--pad);
@@ -45,11 +38,11 @@ p-editor {
 
 input:focus,
 select:focus {
-    background-color: rgba(255, 255, 255, 0.45);
+    background-color: transparent;
     color: var(--darkRed);
     outline: 0;
-    outline-width: 1px;
-    box-shadow: 0.25rem 0.25rem var(--darkBlue), -0.25rem -0.25rem var(--darkRed);
+    outline-width: 0px;
+    /* box-shadow: 0.25rem 0.25rem var(--formBlue), -0.25rem -0.25rem var(--darkRed); */
     border: none;
 }
 
@@ -61,27 +54,30 @@ select:focus {
     margin-top: 1.875rem;
     background-color: var(--darkRed);
     border-color: var(--darkRed);
+    transition: 0.5s;
 
     &:hover {
-        background-color: var(--darkBlue);
-        border-color: var(--darkBlue);
+        cursor: pointer;
+        transform: scale(1.15);
+        transition: 0.5s;
     }
 }
 
-input:focus {
+input:focus,
+select:focus {
+    outline: none;
     border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--darkRed);
+    box-shadow: none;
 }
 
 
 input.ng-invalid.ng-touched,
 select.ng-invalid.ng-touched {
-    border-bottom: 2px solid var(--darkRed);
+    border: 2px solid var(--darkRed);
 }
 
-/* #richEditor.ng-invalid {
-    background-color: var(--darkRed);
-} */
-
 .error {
-    color: var(--darkRed);
+    color: var(--formBlue);
 }

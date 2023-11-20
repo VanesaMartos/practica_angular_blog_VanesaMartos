@@ -1,14 +1,14 @@
 <div class="container">
     <article>
         <div class="row">
-            <figure class="col-4">
+            <figure class="col-lg-4 col-md-12">
                 <img [src]="post.imagen" [alt]="post.titulo">
             </figure>
-            <div class="texto col-8">
-                <h2>{{post.titulo}}</h2>
-                <p>{{post.autor}} </p>
+            <div class="texto col-lg-8 col-md-12">
+                <h3>{{post.titulo}}</h3>
+                <small>{{post.autor}} </small>
                 <p [innerHTML]="post.texto | preview"></p>
-                <p>Categoría: {{post.categoria}}</p>
+                <p>Categoría: <br> {{post.categoria}}</p>
                 <button class="btn" [routerLink]="['/posts', post.id]">Leer más</button>
             </div>
         </div>
